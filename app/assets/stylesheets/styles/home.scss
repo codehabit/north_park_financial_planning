@@ -1,0 +1,46 @@
+.home-hero .logo {
+  background-image: url("logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 125px;
+  height: 75px;
+  padding: 10px;
+  text-align: center;
+}
+
+.home-hero {
+  background-color: rgb(35, 50, 55);
+  color: #D4D4D2;
+  position: fixed;
+  top: 20%;
+  right: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -300px;
+  height: 460px;
+  width: 600px;
+}
+
+.content-centered {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+}
+
+.title {
+  font-family: spinnaker, sans-sarif;
+  font-size: 39px;
+  letter-spacing:0.05em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-family: baskervillemtw01-smbdit,serif;
+  font-size: 24px;
+  font-style: italic;
+  text-align: center;
+}
