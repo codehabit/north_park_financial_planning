@@ -1,6 +1,25 @@
 @import "styles/home.scss";
+@import "styles/top-nav.scss";
 
 body {
   font-size: 10px;
   font-family: Arial,Helvetica,sans-serif;
+  margin: 0;
+}
+
+a {
+  color: #D4D4D2;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.logo {
+  background-image: url("logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 125px;
+  height: 75px;
+  padding: 10px;
+  text-align: center;
 }
