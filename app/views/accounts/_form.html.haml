@@ -1,6 +1,7 @@
 .accounts
   = semantic_form_for @account do |f|
-    = f.input :first
-    = f.input :last
+    = f.input :full_name, label: "Full Name"
     = f.input :email
-    = f.submit "Get Started", class: "submit"
+    = f.button class: "submit" do
+      %span
+        Get Started

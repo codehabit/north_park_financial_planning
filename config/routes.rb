@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   resources :accounts, only: [:new, :create, :show]
-  root to: "home#index"
+  root to: "home#index", as: :home
 end

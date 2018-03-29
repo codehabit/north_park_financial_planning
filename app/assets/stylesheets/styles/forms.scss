@@ -1,4 +1,42 @@
 .accounts {
   display: inline-block;
+  font-size: 14px;
   width: 50%;
+}
+
+.formtastic .submit {
+  background-color: rgb(35, 50, 55);
+  border: none;
+  color: #D4D4D2;
+  cursor: pointer;
+  margin: 5px;
+  padding: 10px;
+  text-align: center;
+  transition: all 0.5s;
+  width: 150px;
+}
+
+.submit span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.submit span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.submit:hover span {
+  padding-right: 25px;
+}
+
+.submit:hover span:after {
+  opacity: 1;
+  right: 0;
 }
