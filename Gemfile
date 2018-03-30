@@ -17,6 +17,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'capistrano-rails', group: :development
 gem 'haml-rails'
 gem 'formtastic'
+gem 'devise'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

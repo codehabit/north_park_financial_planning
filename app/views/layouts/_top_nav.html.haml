@@ -11,3 +11,8 @@
       = link_to "pricing", "#"
     %li
       = link_to "contact", "#"
+    - if admin_signed_in?
+      %li.admin
+        = link_to "manage content", admin_contents_path
+      %li.admin
+        = link_to "sign out", destroy_admin_session_path, method: :delete
