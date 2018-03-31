@@ -1,1 +1,13 @@
-Hi there
+.contents
+  %h1
+    Manage Your Content
+  - if @contents.empty?
+    %h2
+      There is no content yet
+    .submitable
+      = button_to new_admin_content_path, class: "submit", method: :get do
+        %span
+          create new content
+  - @contents.each do |content|
+    = content.name
+

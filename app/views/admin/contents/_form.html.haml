@@ -1,6 +1,7 @@
-= semantic_form_for [:admin, @content] do |f|
-  = f.input :name
-  = f.input :body
-  = f.button class: "submit" do
-    %span
-      Done
+.submitable
+  = semantic_form_for [:admin, @content] do |f|
+    = f.input :name
+    = f.input :body
+    = f.button class: "submit" do
+      %span
+        Done

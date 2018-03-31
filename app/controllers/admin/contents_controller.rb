@@ -1,5 +1,8 @@
 class Admin::ContentsController < ApplicationController
+  before_action :check_admin!
+
   def index
+    @contents = Content.all
   end
 
   def new
@@ -19,5 +22,9 @@ class Admin::ContentsController < ApplicationController
 
   def content_params
     params.require(:content).permit!
+  end
+
+  def check_admin!
+    redirect_to home_path unless admin_signed_in?
   end
 end
