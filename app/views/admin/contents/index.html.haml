@@ -8,6 +8,19 @@
       = button_to new_admin_content_path, class: "submit", method: :get do
         %span
           create new content
-  - @contents.each do |content|
-    = content.name
+  - else
+    %table.table
+      %thead
+        %tr
+          %th Name
+          %th Location
+          %th Author
+          %th Action
+      %tbody
+        - @contents.each do |content|
+          %tr
+            %td= content.name
+            %td Blah
+            %td Blah
+            %td= link_to "Edit", edit_admin_content_path(content)
 

@@ -9,15 +9,8 @@ RSpec.describe Admin::ContentsController do
   end
 
   context "when logged in as admin" do
-    let!(:email) { "non@non.com" }
-    let!(:password) { "password123" }
-    let!(:admin) { Admin.create(email: email, password: password) }
-
     before :each do
-      visit new_admin_session_path
-      fill_in "Email", with: email
-      fill_in "Password", with: password
-      click_on "Log in"
+      login_as_admin
     end
 
     it "shows the contents index" do
@@ -40,7 +33,7 @@ RSpec.describe Admin::ContentsController do
       it "shows a call to action" do
         visit admin_contents_path
         expect(page).to have_content "There is no content yet"
-        expect(page).to have_link "create new content"
+        expect(page).to have_button "create new content"
       end
     end
   end

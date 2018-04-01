@@ -11,7 +11,7 @@ class Admin::ContentsController < ApplicationController
 
   def create
     @content = Content.create(content_params)
-    redirect_to admin_content_path(@content)
+    redirect_to admin_contents_path
   end
 
   def show
