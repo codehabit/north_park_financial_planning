@@ -14,7 +14,17 @@ class Admin::ContentsController < ApplicationController
     redirect_to admin_contents_path
   end
 
+  def update
+    @content = Content.find(params[:id])
+    @content.update(content_params)
+    redirect_to admin_contents_path
+  end
+
   def show
+    @content = Content.find(params[:id])
+  end
+
+  def edit
     @content = Content.find(params[:id])
   end
 

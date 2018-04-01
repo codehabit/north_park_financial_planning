@@ -12,7 +12,7 @@ RSpec.describe Admin::ContentsController do
     visit new_admin_content_path
     fill_in "Name", with: name
     fill_in "Body", with: body
-    click_on "Done"
+    click_on "done"
   end
 
   it "redirects to the index page" do
